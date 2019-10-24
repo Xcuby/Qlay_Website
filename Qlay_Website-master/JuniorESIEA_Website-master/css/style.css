@@ -1,0 +1,259 @@
+/*******************************************/
+/*                General                 */
+/*******************************************/
+
+body {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+}
+
+.relative {
+  position: relative;
+}
+
+p{
+  font-size: 1.4em;
+}
+
+a{
+  color: inherit
+}
+a:hover{
+  transition: 0.2s ease-in-out;
+  opacity: 0.5;
+}
+/*******************************************/
+/*                 Header                  */
+/*******************************************/
+
+#index-banner {
+  width: 100%;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.brand-logo img {
+  height: 75px;
+  margin : 15px 0 0 30px;
+}
+
+/*******************************************/
+/*               LandingPage               */
+/*******************************************/
+
+.background {
+  
+  height: 100vh;
+}
+
+.background::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: url('../img/half-round.svg') no-repeat center center;
+  margin-bottom: -1px;
+  background-size: cover;
+  height: 100px;
+}
+
+/*******************************************/
+/*               Page Pres                 */
+/*******************************************/
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block1 {
+  padding: 0 20px;
+  width: 600px;
+}
+
+.col-content1 {
+ margin: 10px;
+ padding: 10px;
+ min-height: 325px;
+ width: 600px;
+}
+
+.icon-block1 .material-icons {
+	font-size: inherit;
+}
+
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.col-content {
+ margin: 10px;
+ padding: 10px;
+ min-height: 325px;
+}
+
+.skill-title{
+  size: 5em
+}
+
+.separator{
+  content: '';
+  width: 100%;
+  margin-bottom: -1px;
+  
+  height:15em;
+  transform: rotate(180deg);
+  background: url("../img/background5.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.cnje-logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+/*******************************************/
+/*                 Contact                 */
+/*******************************************/
+
+
+  /* label color */
+  .input-field label {
+    color: #000;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: #000;
+  }
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* valid color */
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* invalid color */
+  .input-field input[type=text].invalid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: #000;
+  }
+
+/*******************************************/
+/*                 Footer                  */
+/*******************************************/
+
+
+.presentation > .row {
+  margin-bottom: 0;
+}
+
+.contact {
+  padding-bottom: 200px;
+}
+
+.contact::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: url('../img/wave-bottom-blue.svg') no-repeat center center;
+  margin-bottom: -1px;
+  background-size: cover;
+  height: 200px;
+}
+
+.social ul{
+  display: flex;
+}
+.social ul li {
+  margin: 1em;
+}
+
+.page-footer{
+  background-color:#1b2337;
+}
+/*******************************************/
+/*              KEYFRAMES                  */
+/*******************************************/
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+
+/*******************************************/
+/*              ANIMATION                  */
+/*******************************************/
+.animate {
+	overflow: hidden;
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
+
+/*******************************************/
+/*               MEDIA QUERIES             */
+/*******************************************/
+
+@media only screen and (min-width: 2000px) {
+
+  .contact {
+    padding-bottom: 400px;
+  }
+
+  .contact::after {
+    margin-bottom: -1px;
+    height: 400px;
+  }
+
+  .background::after {
+    height: 150px;
+  }
+
+}
+
+
+@media only screen and (min-width: 601px) {
+
+  nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+    height: 100px;
+    line-height: 100px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .brand-logo img {
+    height: 60px;
+  }
+}
+
+
+
